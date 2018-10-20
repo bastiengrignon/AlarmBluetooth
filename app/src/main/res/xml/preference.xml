@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory
+        android:title="Général" >
+        <android.support.v7.preference.SwitchPreferenceCompat
+            android:defaultValue="true"
+            android:key="buzzer_check"
+            android:title="@string/pref_switch_buzzer_title"
+            android:summaryOn="@string/pref_switch_buzzer_sum_on"
+            android:summaryOff="@string/pref_switch_buzzer_sum_off"/>
+
+        <android.support.v7.preference.SwitchPreferenceCompat
+            android:defaultValue="true"
+            android:key="voyant_check"
+            android:title="@string/pref_switch_voyant_title"
+            android:summaryOn="@string/pref_switch_voyant_sum_on"
+            android:summaryOff="@string/pref_switch_voyant_sum_off"/>
+
+        <android.support.v7.preference.SwitchPreferenceCompat
+            android:defaultValue="false"
+            android:key="notif_switch"
+            android:title="@string/pref_switch_notif_title"
+            android:summary="@string/pref_switch_notif_sum"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Répétition">
+        <ListPreference
+            android:key="pref_list_repetition"
+            android:defaultValue="2"
+            android:title="@string/pref_activation_alarme_title"
+            android:summary="@string/pref_activation_alarme_sum"
+            android:entries="@array/pref_choix_repetition_names"
+            android:entryValues="@array/pref_choix_repetition_values" />
+    </PreferenceCategory>
+</PreferenceScreen>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.party.map.myapplication.MainActivity"
+    tools:layout_editor_absoluteX="0dp"
+    tools:layout_editor_absoluteY="81dp">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/disconnnected"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        tools:context="com.party.map.myapplication.MainActivity"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="81dp">
+
+        <Button
+            android:id="@+id/buttonConnexion"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="68dp"
+            android:background="@drawable/style_bouton"
+            android:text="@string/button_connexion"
+            android:textColor="@color/colorWhite"
+            android:visibility="visible"
+            tools:layout_editor_absoluteX="156dp"
+            tools:layout_editor_absoluteY="53dp" />
+
+        <ImageView
+            android:id="@+id/imageReveil"
+            android:layout_width="match_parent"
+            android:layout_height="320dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:contentDescription="@string/imageReveil_contentDesc"
+            android:visibility="visible"
+            app:srcCompat="@drawable/reveil"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="174dp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/connected"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_list"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_above="@+id/ln"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="42dp"
+            android:scrollbars="vertical">
+
+        </android.support.v7.widget.RecyclerView>
+
+        <LinearLayout
+            android:id="@+id/ln"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="119dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textViewHeure"
+                android:layout_width="170dp"
+                android:layout_height="50dp"
+                android:layout_weight="5"
+                android:text="@string/hint_temps"
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textSize="30sp" />
+
+            <Switch
+                android:id="@+id/switch_alarm"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginEnd="15dp"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/floatingActionButtonAdd"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|bottom"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="24dp"
+            android:clickable="true"
+            android:focusable="true"
+            app:background="@color/colorArduino"
+            app:fabSize="normal"
+            app:rippleColor="@android:color/transparent"
+            app:srcCompat="@drawable/add_icon" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

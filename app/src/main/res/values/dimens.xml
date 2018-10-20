@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- CardView from RecyclerView -->
+    <dimen name="margin_card">5dp</dimen>
+    <dimen name="corner_radius_card">5dp</dimen>
+
+    <!-- Icon delete from RecyclerView -->
+    <dimen name="icon_delete">30dp</dimen>
+    <dimen name="paddind_10">10dp</dimen>
+    <dimen name="text_delete">12sp</dimen>
+</resources>

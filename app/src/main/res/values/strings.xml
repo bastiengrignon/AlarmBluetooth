@@ -1,0 +1,81 @@
+<resources>
+    <string name="app_name">Contrôle Réveil</string>
+    <string name="label_appareils">Appareils Asscociés</string>
+    <string name="button_connexion">Connexion</string>
+    <string name="imageReveil_contentDesc">Permet d\'acceder à l\'appli sans se connecter</string>
+    <string name="boutonEnvoyer_contentDesc">Envoyer des données en Bluetooth</string>
+
+    <string name="bluetooth_enabled_message">Le bluetooth est activé</string>
+    <string name="bluetooth_disconnected">Bluetooth Déconnecté</string>
+    <string name="bluetooth_error_connection">Une erreur est survenue lors de la connexion</string>
+    <string name="phone_no_bluetooth">Votre appareil n\'a pas le Bluetooth</string>
+    <string name="error_bluetooth_activation">Le Bluetooth n\'a pas été activé, l\'appli s\'est fermée</string>
+    <string name="connection_bluetooth">Connecté à %1$s</string>
+    <string name="error_connection_bluetooth">Impossible de se connecter à l\'appareil</string>
+    <string name="error_mac_connection">Echec d\'obtention de l\'adresse MAC</string>
+    <string name="error_data_send">Problème d\'envoi des données</string>
+    <string name="error_not_connected">Tu dois d\'abord te connecter</string>
+    <string name="button_send_bluetooth">Envoyer</string>
+    <string name="alarm_activated">Alarme Activée</string>
+    <string name="time_picker_title">Heure de l\'alarme</string>
+
+    <string name="hint_date">Choix de la date</string>
+    <string name="hint_temps">Choix de l\'heure</string>
+
+    <string name="text_alarm">%02d : %02d </string>
+    <string name="maj_date">%1d/%2d/%3d</string>
+    <string name="maj_temps">%1d:%2d</string>
+    <string name="txt_btn_send">Envoyer</string>
+
+    <!-- String menu -->
+    <string name="menu_maj">Mise à jour</string>
+    <string name="menu_param">Paramètres</string>
+    <string name="title_activity_param">Paramètres</string>
+
+    <!-- Strings related to Preference Settings -->
+    <string name="pref_switch_buzzer_title">Buzzer</string>
+    <string name="pref_switch_buzzer_sum_on">Alarme sonore active</string>
+    <string name="pref_switch_buzzer_sum_off">Alarme sonore inactive</string>
+
+
+    <string name="pref_switch_voyant_title">Voyant lumineux</string>
+    <string name="pref_switch_voyant_sum_on">Voyant lumineux activé</string>
+    <string name="pref_switch_voyant_sum_off">Voyant lumineux désactivé</string>
+
+    <string name="pref_switch_notif_title">Notification de l\'alarme</string>
+    <string name="pref_switch_notif_sum">Affiche une notification quand l\'alarme est active</string>
+    <string name="pref_activation_alarme_title">Choix du temps d\'activation de l\'alarme</string>
+    <string name="pref_activation_alarme_sum">Temps d\'activation de l\'alarme</string>
+    <string-array name="pref_choix_repetition_names">
+        <item>2 secondes</item>
+        <item>5 secondes</item>
+        <item>8 secondes</item>
+        <item>12 secondes</item>
+        <item>30 secondes</item>
+        <item>1 min</item>
+    </string-array>
+    <string-array name="pref_choix_repetition_values">
+        <item>2</item>
+        <item>5</item>
+        <item>8</item>
+        <item>12</item>
+        <item>30</item>
+        <item>60</item>
+    </string-array>
+    <string-array name="pref_choix_repeter">
+        <item>Lundi</item>
+        <item>Mardi</item>
+        <item>Mercredi</item>
+        <item>Jeudi</item>
+        <item>Vendredi</item>
+        <item>Samedi</item>
+        <item>Dimanche</item>
+    </string-array>
+
+    <!-- RecyclerView Strings -->
+    <string name="icon_delete_content_desc">icon_delete</string>
+    <string name="text_delete">DELETE</string>
+    <string name="snackbar_restore_alarm">Alarme de %1s supprimée</string>
+    <integer name="snackbar_length">5000</integer>
+
+</resources><!-- memo: Pour l'apostrophe rajouter antiSlash "\" -->

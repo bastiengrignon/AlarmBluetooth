@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+ <!-- forme du bouton -->
+    <solid
+        android:color="@color/colorArduino">
+    </solid>
+    <corners
+        android:radius="6pt"> <!-- angles aux coins du bouton -->
+    </corners>
+    <padding
+        android:top="7pt"
+        android:right="7pt"
+        android:bottom="7pt"
+        android:left="7pt">
+    </padding> <!-- marge du texte 4 cotés du bouton -->
+    <stroke
+        android:color="@color/colorArduino"
+        android:width="1sp"> <!-- bordure du bouton -->
+    </stroke>
+</shape>
+ <!--   <selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+</selector> -->
