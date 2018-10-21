@@ -4,6 +4,7 @@ import android.os.Parcel;
 import android.os.Parcelable;
 
 public class AlarmeItem implements Parcelable {
+    private int idAlarm;
     private String hAlarm;
     private boolean isAlarmEnabled;
 
@@ -29,7 +30,7 @@ public class AlarmeItem implements Parcelable {
         return hAlarm;
     }
 
-    public void sethAlarm(String hAlarm) {
+    void sethAlarm(String hAlarm) {
         this.hAlarm = hAlarm;
     }
 
@@ -37,7 +38,7 @@ public class AlarmeItem implements Parcelable {
         return isAlarmEnabled;
     }
 
-    public void setAlarmEnabled(boolean alarmEnabled) {
+    void setAlarmEnabled(boolean alarmEnabled) {
         isAlarmEnabled = alarmEnabled;
     }
 
@@ -50,5 +51,13 @@ public class AlarmeItem implements Parcelable {
     public void writeToParcel(Parcel dest, int flags) {
         dest.writeString(hAlarm);
         dest.writeByte((byte) (isAlarmEnabled ? 1 : 0));    //memo: Si boolean == true -> byte = 1 sinon byte = 0
+    }
+
+    int getIdAlarm() {
+        return idAlarm;
+    }
+
+    void setIdAlarm(int idAlarm) {
+        this.idAlarm = idAlarm;
     }
 }
