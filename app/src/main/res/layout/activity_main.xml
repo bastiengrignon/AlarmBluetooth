@@ -14,7 +14,7 @@
         android:id="@+id/disconnnected"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:visibility="gone"
+        android:visibility="visible"
         tools:context="com.party.map.myapplication.MainActivity"
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="81dp">
@@ -22,7 +22,7 @@
         <Button
             android:id="@+id/buttonConnexion"
             android:layout_width="150dp"
-            android:layout_height="50dp"
+            android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="68dp"
@@ -37,8 +37,8 @@
             android:id="@+id/imageReveil"
             android:layout_width="match_parent"
             android:layout_height="320dp"
-            android:layout_alignParentBottom="true"
             android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
             android:contentDescription="@string/imageReveil_contentDesc"
             android:visibility="visible"
             app:srcCompat="@drawable/reveil"
@@ -51,7 +51,7 @@
         android:id="@+id/connected"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:visibility="visible">
+        android:visibility="gone">
 
         <android.support.v7.widget.RecyclerView
             android:id="@+id/rv_list"
@@ -96,9 +96,9 @@
             android:id="@+id/floatingActionButtonAdd"
             android:layout_width="70dp"
             android:layout_height="wrap_content"
-            android:layout_gravity="end|bottom"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
+            android:layout_gravity="end|bottom"
             android:layout_marginBottom="24dp"
             android:clickable="true"
             android:focusable="true"

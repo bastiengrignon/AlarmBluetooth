@@ -9,9 +9,17 @@ public class AlarmeItem implements Parcelable {
     private boolean isAlarmEnabled;
 
     private AlarmeItem(Parcel in) {
+        idAlarm = in.readInt();
         hAlarm = in.readString();
         isAlarmEnabled = in.readByte() != 0;
     }
+
+    AlarmeItem(int id, String alarm, boolean enabled){
+        this.idAlarm = id;
+        this.hAlarm = alarm;
+        this.isAlarmEnabled = enabled;
+    }
+
     AlarmeItem(){}
 
     public static final Creator<AlarmeItem> CREATOR = new Creator<AlarmeItem>() {

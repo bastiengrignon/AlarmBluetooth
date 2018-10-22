@@ -30,7 +30,8 @@ public class AlarmManager {
     }
 
     public void open() {
-        db = maBaseSQLite.getWritableDatabase();
+        if (db == null)
+            db = maBaseSQLite.getWritableDatabase();
     }
 
     public void close() {
@@ -70,5 +71,8 @@ public class AlarmManager {
         return db.rawQuery("SELECT * FROM " + TABLE_NAME, null);
     }
 
+    public SQLiteDatabase getDb() {
+        return db;
+    }
 
 }

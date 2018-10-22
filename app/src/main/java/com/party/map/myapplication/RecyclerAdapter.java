@@ -18,6 +18,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.Recycl
     private Context myContext;
     private ArrayList<AlarmeItem> myAlarmeList;
     boolean test;
+    private AlarmePrefs alarmePrefs;
 
     /**
      * Constructeur du recyclerView
@@ -34,6 +35,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.Recycl
     RecyclerAdapter(@NonNull Context context, ArrayList<AlarmeItem> alarmeItems){
         this.myContext = context;
         this.myAlarmeList = alarmeItems;
+        this.alarmePrefs = new AlarmePrefs(context);
     }
 
     /**
@@ -46,6 +48,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.Recycl
         item.sethAlarm(heure);
         item.setAlarmEnabled(enable);
         myAlarmeList.add(item);
+        alarmePrefs.setPrefsAlarm(item);
         this.notifyDataSetChanged();
     }
 
@@ -55,6 +58,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.Recycl
      */
     void removeAlarm(int position){
         myAlarmeList.remove(position);
+        alarmePrefs.deleteAlarm(myAlarmeList.get(position));
         this.notifyDataSetChanged();
     }
 
@@ -65,10 +69,12 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.Recycl
      */
     void restoreAlarm(AlarmeItem alarmeItem, int position) {
         myAlarmeList.add(position, alarmeItem);
+        alarmePrefs.setPrefsAlarm(alarmeItem);
         this.notifyItemInserted(position);
     }
 
     /**
+     * Tableau d'alarme à ajouter
      * @param newAlarm : liste d'alarmes à remplacer dans la liste actuelle
      */
     void newAlarm(ArrayList<AlarmeItem> newAlarm) {
@@ -77,6 +83,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.Recycl
     }
 
     /**
+     * Récupère le tableau des alarmes
      * @return la liste de toutes les alarmes enregistrées
      */
     ArrayList<AlarmeItem> getMyAlarmeList() {

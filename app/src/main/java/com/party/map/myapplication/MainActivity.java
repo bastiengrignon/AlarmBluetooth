@@ -99,8 +99,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         myBluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
 
         if (savedInstanceState != null) {   //Si on a déjà une instance sauvegardée on récupère les alarmes
-            ArrayList<AlarmeItem> mysRegisteredAlarms = savedInstanceState.getParcelableArrayList(SavedKey);
-            myRecyclerAdapter.newAlarm(mysRegisteredAlarms);
+//            ArrayList<AlarmeItem> mysRegisteredAlarms = savedInstanceState.getParcelableArrayList(SavedKey);
+//            myRecyclerAdapter.newAlarm(mysRegisteredAlarms);
+            AlarmePrefs alarmePrefs = new AlarmePrefs(getApplicationContext());
+            alarmePrefs.getPrefsAlarm(1);
         }
         else {
             Alarm alarms[] = FakeData.getFakeAlarm();
